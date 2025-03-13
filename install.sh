@@ -85,8 +85,8 @@ cat > ~/.local/share/applications/netlogo.desktop << EOF
 Type=Application
 Name=NetLogo 6.2.1
 Comment=NetLogo multi-agent programmable modeling environment
-Exec=$HOME/Documents/run-netlogo.sh
-Icon=$HOME/Documents/NetLogo-6.2.1/NetLogo.ico
+Exec=$HOME/Documents/HyprLogo/run-netlogo.sh
+Icon=$HOME/Documents/HyprLogo/NetLogo-6.2.1/NetLogo.ico
 Terminal=false
 Categories=Education;Science;
 StartupWMClass=netlogo-gui-Startup
