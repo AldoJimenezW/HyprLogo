@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![HyprLogo Logo](https://raw.githubusercontent.com/NetLogo/NetLogo/master/dist/images/NetLogo-App.png)
-
 *Run NetLogo 6.2.1 smoothly on Wayland compositors like Hyprland*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -85,9 +83,27 @@ export GDK_BACKEND=x11
 export XDG_SESSION_TYPE=x11
 export QT_QPA_PLATFORM=xcb
 export LIBGL_ALWAYS_SOFTWARE=1
+unset XLIB_SKIP_ARGB_VISUALS
 ```
 
 These settings force Java applications to use X11 compatibility mode and software rendering, which prevents the black screen issues commonly encountered in Wayland environments.
+
+### 🛠️ Hyprland Configuration
+
+For optimal performance with Hyprland, add these lines to your `~/.config/hypr/hyprland.conf`:
+
+```conf
+# Java application configuration for Hyprland
+windowrulev2 = workspace 2, class:^(netlogo-gui-Startup)$
+windowrulev2 = float, class:^(netlogo-gui-Startup)$
+
+# Environment variables for Java applications
+env = _JAVA_AWT_WM_NONREPARENTING,1
+env = _JAVA_OPTIONS,-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+env = GDK_BACKEND,x11
+```
+
+This configuration helps Hyprland properly manage NetLogo windows and ensures consistent rendering.
 
 ## 🤝 Contributing
 
