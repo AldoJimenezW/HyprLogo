@@ -34,7 +34,7 @@ This tool is perfect for students and researchers who need to use NetLogo in mod
 ### Option 1: Quick Install
 
 ```bash
-git clone https://github.com/yourusername/HyprLogo.git
+git clone https://github.com/AldoJimenezW/HyprLogo.git
 cd HyprLogo
 chmod +x install.sh
 ./install.sh
