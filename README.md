@@ -46,7 +46,7 @@ Follow the on-screen prompts to select your distribution.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/HyprLogo.git
+   git clone https://github.com/AldoJimenezW/HyprLogo.git
    cd HyprLogo
    ```
 
